@@ -99,11 +99,6 @@ a.article-title:hover {
     margin-left: -250px;
 }
 
-#sidebar ul p {
-    color: green;
-    padding: 10px;
-}
-
 #sidebar ul li a {
     padding: 10px;
     font-size: 1.1em;
@@ -113,7 +108,6 @@ a.article-title:hover {
 
 #sidebar ul li a:hover {
     color: #7386D5;
-    background: gray;
 }
 
 a[data-toggle="collapse"] {
@@ -123,7 +117,6 @@ a[data-toggle="collapse"] {
 ul ul a {
     font-size: 0.9em !important;
     padding-left: 30px !important;
-    background: #6d7fcc;
 }
 
 ul.CTAs {

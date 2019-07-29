@@ -9,6 +9,10 @@ selenium = "*"
 [packages]
 toml = "*"
 Django = "*"
+pymongo = "*"
+mongoengine = "*"
+python-dotenv = "*"
+dnspython = "*"
 
 [requires]
 python_version = "3.6"

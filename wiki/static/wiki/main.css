@@ -13,7 +13,7 @@ ul {
 }
 
 .bg-steel {
-  background-color: #5f788a;
+  background-color: gray;
 }
 
 .site-header .navbar-nav .nav-link {
@@ -81,4 +81,65 @@ a.article-title:hover {
 
 .account-heading {
   font-size: 2.5rem;
+}
+
+.wrapper {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+}
+
+#sidebar {
+    min-width: 250px;
+    max-width: 250px;
+    padding-right: 2rem;
+}
+
+#sidebar.active {
+    margin-left: -250px;
+}
+
+#sidebar ul p {
+    color: green;
+    padding: 10px;
+}
+
+#sidebar ul li a {
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+    color: gray;
+}
+
+#sidebar ul li a:hover {
+    color: #7386D5;
+    background: gray;
+}
+
+a[data-toggle="collapse"] {
+    position: relative;
+}
+
+ul ul a {
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+    background: #6d7fcc;
+}
+
+ul.CTAs {
+    padding: 20px;
+}
+
+ul.CTAs a {
+    text-align: center;
+    font-size: 0.9em !important;
+    display: block;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+a.article,
+a.article:hover {
+    background: #6d7fcc !important;
+    color: #fff !important;
 }

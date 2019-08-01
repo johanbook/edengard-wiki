@@ -37,8 +37,12 @@
                         <form class="mt-1" method="get">
                             <input type="text" name="search" placeholder="Search">
                         </form>
-                        <a class="nav-item nav-link" href="#">Login</a>
-                        <a class="nav-item nav-link" href="{% url 'users-register' %}">Register</a>
+                        {% if user.is_authenticated %}
+                          <a class="nav-item nav-link" href="{% url 'logout' %}">Logout</a>
+                        {% else %}
+                          <a class="nav-item nav-link" href="{% url 'login' %}">Login</a>
+                          <a class="nav-item nav-link" href="{% url 'register' %}">Register</a>
+                        {% endif %}
                     </div>
                 </div>
             </div>
@@ -49,7 +53,7 @@
         <!-- Sidebar  -->
         <nav id="sidebar">
             <ul class="list-unstyled components">
-                <li class="active"><a href="#">Home</a></li>
+                <li class="active"><a href="{% url 'wiki-home' %}">Home</a></li>
 
                 <hr>
                 <li>

@@ -6,7 +6,6 @@ from django.contrib.auth.models import User
 class Article(models.Model):
     title = models.CharField(max_length=64)
     description = models.CharField(max_length=128)
-    content = models.TextField(default='')
     date_posted = models.DateTimeField(default=timezone.now)
     date_edited = models.DateTimeField(auto_now=True)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
@@ -18,7 +17,7 @@ class Article(models.Model):
         return self.title
 
 
-class Country(models.Model):
+class Country(Article):
     language = models.CharField(max_length=64)
     population = models.IntegerField(default=-1)
     religion = models.CharField(max_length=64)
@@ -35,15 +34,16 @@ class Country(models.Model):
         verbose_name_plural = 'countries'
 
 
-class City(models.Model):
-    #country = models.ForeignKey(Country, on_delete=models.CASCADE)
+class City(Article):
+    country = models.ForeignKey(Country, on_delete=models.SET_NULL)
+
     history = models.TextField(default=None, blank=True, null=True)
 
     class Meta:
         verbose_name_plural = 'cities'
 
 
-class Item(models.Model):
+class Item(Article):
     pass
 
 
@@ -54,21 +54,23 @@ class Language(Article):
     phrases = models.TextField(default=None, blank=True, null=True)
 
 
-class Opus(models.Model):
+class Opus(Article):
+
+    class Meta:
+        verbose_name_plural = 'opuses'
+
+
+class Person(Article):
     pass
 
 
-class Person(models.Model):
-    pass
-
-
-class Religion(models.Model):
+class Religion(Article):
     belief = models.TextField(default=None, blank=True, null=True)
     history = models.TextField(default=None, blank=True, null=True)
     worship = models.TextField(default=None, blank=True, null=True)
 
 
-class Specie(models.Model):
+class Specie(Article):
     culture = models.TextField(default=None, blank=True, null=True)
     physiology = models.TextField(default=None, blank=True, null=True)
     occurrence = models.TextField(default=None, blank=True, null=True)

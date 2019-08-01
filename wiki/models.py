@@ -31,7 +31,7 @@ class Country(Article):
     other = models.TextField(default=None, blank=True, null=True)
 
     class Meta:
-        verbose_name_plural = 'countries'
+        verbose_name_plural = "countries"
 
 
 class City(Article):
@@ -40,7 +40,7 @@ class City(Article):
     history = models.TextField(default=None, blank=True, null=True)
 
     class Meta:
-        verbose_name_plural = 'cities'
+        verbose_name_plural = "cities"
 
 
 class Item(Article):
@@ -55,9 +55,8 @@ class Language(Article):
 
 
 class Opus(Article):
-
     class Meta:
-        verbose_name_plural = 'opuses'
+        verbose_name_plural = "opuses"
 
 
 class Person(Article):
@@ -74,3 +73,6 @@ class Specie(Article):
     culture = models.TextField(default=None, blank=True, null=True)
     physiology = models.TextField(default=None, blank=True, null=True)
     occurrence = models.TextField(default=None, blank=True, null=True)
+
+
+MODELS = [Country, City, Item, Opus, Person, Religion, Specie]

@@ -5,14 +5,12 @@ from .forms import AccountRegistrationForm
 
 
 def register(request):
-    if request.method == 'POST':
+    if request.method == "POST":
         form = AccountRegistrationForm(request.POST)
         if form.is_valid():
-            username = form.cleaned_data.get('username')
-            messages.success(request, 'Account request sent')
-            return redirect('wiki-home')
+            username = form.cleaned_data.get("username")
+            messages.success(request, "Account request sent")
+            return redirect("wiki-home")
     else:
         form = AccountRegistrationForm()
-    return render(
-        request, 'users/register.html', {'form': form}
-    )
+    return render(request, "users/register.html", {"form": form})

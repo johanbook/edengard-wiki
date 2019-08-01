@@ -1,0 +1,7 @@
+toml
+Django
+python-dotenv
+dnspython
+djongo
+django-crispy-forms
+gunicorn

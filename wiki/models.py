@@ -6,6 +6,7 @@ from django.contrib.auth.models import User
 class Article(models.Model):
     title = models.CharField(max_length=64)
     description = models.CharField(max_length=128)
+    keywords = models.CharField(max_length=256)
     date_posted = models.DateTimeField(default=timezone.now)
     date_edited = models.DateTimeField(auto_now=True)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
@@ -75,4 +76,4 @@ class Specie(Article):
     occurrence = models.TextField(default=None, blank=True, null=True)
 
 
-MODELS = [Country, City, Item, Opus, Person, Religion, Specie]
+MODELS = [Country, City, Item, Language, Opus, Person, Religion, Specie]

@@ -57,15 +57,15 @@
                 <li class="active"><a href="{% url 'wiki-home' %}">Home</a></li>
 
                 <hr>
-                <li><a href="#">Countries</a></li>
-                <li><a href="#">Creatures</a></li>
-                <li><a href="#">Dwellings</a></li>
+                <li><a href="{% url 'wiki-country' %}">Countries</a></li>
+                <li><a href="{% url 'wiki-specie' %}">Creatures</a></li>
+                <li><a href="{% url 'wiki-city' %}">Dwellings</a></li>
                 <li><a href="#">History</a></li>
-                <li><a href="#">Languages</a></li>
+                <li><a href="{% url 'wiki-language' %}">Languages</a></li>
                 <li><a href="#">Lore</a></li>
-                <li><a href="#">Religion</a></li>
+                <li><a href="{% url 'wiki-religion' %}">Religion</a></li>
                 <li><a href="#">Technology</a></li>
-                <li><a href="#">Writings</a></li>
+                <li><a href="{% url 'wiki-opus' %}">Writings</a></li>
 
                 <hr>
                 <li><a href="#">Random article</a></li>

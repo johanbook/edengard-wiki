@@ -35,7 +35,7 @@ class Country(Article):
 
 
 class City(Article):
-    country = models.ForeignKey(Country, on_delete=models.SET_NULL)
+    country = models.ForeignKey(Country, on_delete=models.SET_NULL, null=True)
 
     history = models.TextField(default=None, blank=True, null=True)
 

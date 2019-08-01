@@ -7,7 +7,7 @@ def handler404(request, exception):
     return response
 
 
-def handler500(request, exception):
+def handler500(request):
     response = render_to_response("404.html")
     response.status_code = 500
     return response

@@ -79,7 +79,8 @@ WSGI_APPLICATION = 'django-wiki.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'djongo',
-        'HOST': os.getenv('DATABASE_URI')
+        'HOST': os.getenv('DATABASE_URI'),
+        'NAME': os.getenv('DATABASE_NAME'),
     }
 }
 

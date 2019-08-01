@@ -10,7 +10,7 @@ def about(request):
 
 def home(request):
     context = {
-        'article': Article.objects.first()
+        'article': None#Article.objects.first()
     }
     return render(request, 'wiki/home.html', context)
 

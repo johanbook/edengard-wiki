@@ -1,0 +1,10 @@
+{% extends "wiki/base.html" %}
+{% block content %}
+  <div class="media-body">
+    <h2 class="article-title">{{ article.title }}</h2>
+    <div class="article-metadata">
+      <small class="text-muted">Written by: {{ article.author }}, last edited: {{ article.date_edited}}</small>
+    </div>
+    <p class="article-content">{{ article.content }}</p>
+  </div>
+{% endblock content %}

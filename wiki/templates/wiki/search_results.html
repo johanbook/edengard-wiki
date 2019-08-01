@@ -1,0 +1,12 @@
+{% extends "wiki/base.html" %}
+{% block content %}
+<h1>Search results</h1>
+
+<ul class="list-group list-group-flush">
+  {% for article in object_list %}
+    <li class="list-group-item">
+      <b>{{ article.title }}</b> {{ article.description }}
+    </li>
+  {% endfor %}
+</ul>
+{% endblock content %}

@@ -5,6 +5,7 @@ from django.contrib.auth.models import User
 
 class Article(models.Model):
     title = models.CharField(max_length=100)
+    description = models.TextField(default='')
     content = models.TextField()
     date_posted = models.DateTimeField(default=timezone.now)
     date_edited = models.DateTimeField(auto_now=True)

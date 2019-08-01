@@ -34,8 +34,8 @@
                     </div>
                     <!-- Navbar Right Side -->
                     <div class="navbar-nav">
-                        <form class="mt-1" method="get">
-                            <input type="text" name="search" placeholder="Search">
+                        <form class="mt-1" method="get" action="{% url 'search' %}">
+                            <input type="text" name="q" placeholder="Search">
                         </form>
                         {% if user.is_authenticated %}
                           <a class="nav-item nav-link" href="{% url 'logout' %}">Logout</a>

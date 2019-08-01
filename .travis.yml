@@ -1,5 +1,7 @@
 language: python
-install: pipenv install --deploy
+install:
+  - pip install pipenv
+  - pipenv sync
 deploy:
   provider: heroku
   api_key: $(HEROKU_API_KEY)

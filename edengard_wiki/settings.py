@@ -54,7 +54,7 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
-ROOT_URLCONF = "django-wiki.urls"
+ROOT_URLCONF = "edengard_wiki.urls"
 
 TEMPLATES = [
     {
@@ -72,7 +72,7 @@ TEMPLATES = [
     }
 ]
 
-WSGI_APPLICATION = "django-wiki.wsgi.application"
+WSGI_APPLICATION = "edengard_wiki.wsgi.application"
 
 
 # Database

@@ -3,5 +3,4 @@ install:
     - pip install pipenv
     - pipenv install --dev
 script:
-    - pipenv shell
     - nosetests .

@@ -31,7 +31,7 @@
                         <form class="mt-1" method="get" action="{% url 'search' %}">
                             <input type="text" name="q" placeholder="Search">
                         </form>
-                        <div class="collapse navbar-collapse" id="navbarToggle">
+                        <div class="collapse navbar-collapse">
                         {% if user.is_authenticated %}
                           <a class="nav-item nav-link" href="{% url 'logout' %}">Logout</a>
                         {% else %}

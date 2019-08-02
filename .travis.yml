@@ -1,5 +1,7 @@
 language: python
-deploy:
-  provider: heroku
-  api_key: $(HEROKU_API_KEY)
-  app: edengard
+install:
+    - pip install pipenv
+    - pipenv install --dev
+script:
+    - pipenv shell
+    - nosetests .

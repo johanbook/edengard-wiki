@@ -1,1 +1,1 @@
-web: gunicorn django-wiki.wsgi
+web: gunicorn edengard-wiki.wsgi

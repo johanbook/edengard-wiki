@@ -5,7 +5,7 @@
 <ul class="list-group list-group-flush">
   {% for article in object_list %}
     <li class="list-group-item">
-      <b>{{ article.title }}</b> {{ article.description }}
+      <b><a href="{% url article_url title=article.title %}">{{ article.title }}</a></b> {{ article.description }}
     </li>
   {% endfor %}
 </ul>

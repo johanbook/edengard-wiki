@@ -11,6 +11,8 @@ class Article(models.Model):
     date_edited = models.DateTimeField(auto_now=True)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
 
+    content = models.TextField(default=None, blank=True, null=True)
+
     class Meta:
         abstract = True
 

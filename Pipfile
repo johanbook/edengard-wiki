@@ -16,6 +16,7 @@ djongo = "*"
 django-crispy-forms = "*"
 gunicorn = "*"
 whitenoise = "*"
+markdown = "*"
 
 [requires]
 python_version = "3.6"

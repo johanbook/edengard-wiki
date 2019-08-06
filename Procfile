@@ -1,1 +1,1 @@
-web: gunicorn edengard-wiki.wsgi
+web: gunicorn edengard_wiki.wsgi

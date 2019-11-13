@@ -6,7 +6,7 @@
     <!-- Header-->
     <h2 class="article-title">{{ article.title }}</h2>
     <div class="article-metadata">
-      <small class="text-muted">Written by: {{ article.author }}, last edited: {{ article.date_edited}}</small>
+      <small class="text-muted">Written by: {{ article.author | capfirst }}, last edited: {{ article.date_edited}}</small>
     </div>
 
     <!-- Summary -->
@@ -33,6 +33,10 @@
     {% if article.military %} <h2>Military</h2><hr> {{ article.military | markdown | safe }} {% endif%}
     {% if article.locations %} <h2>Locations</h2><hr> {{ article.locations | markdown | safe }}  {% endif%}
     {% if article.other %} <h2>Other</h2><hr> {{ article.other | markdown | safe }} {% endif%}
+
+    {% for field in fields_null %}
+      <h2>{{ field.name }}</h2><hr> {{ field | markdown | safe }}
+    {% endfor %}
 
   </div>
 {% endblock content %}

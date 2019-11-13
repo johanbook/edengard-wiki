@@ -1,3 +1,4 @@
+from django.db .models import TextField
 from django.http import Http404
 from django.shortcuts import render
 from django.views.generic import ListView
@@ -26,19 +27,18 @@ def get_category_view(category_model):
     return CategoryListView.as_view()
 
 
-def city(request, title):
-    article = models.City.objects.filter(title__iexact=title).first()
-    if article:
-        return render(request, "wiki/article.html", context={'article': article})
-    else:
-        raise Http404
-
-
 def article_by_model(model):
     def view_article(request, title):
         article = model.objects.filter(title__iexact=title).first()
         if article:
-            return render(request, "wiki/article.html", context={'article': article})
+            return render(
+                request,
+                "wiki/article.html",
+                context={
+                    'article': article,
+                    'fields': [field for field in article._meta.fields if isinstance(field, TextField)]
+                }
+            )
         else:
             raise Http404
     return view_article
